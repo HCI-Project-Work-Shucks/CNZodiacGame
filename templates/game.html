@@ -116,16 +116,16 @@
       </tr>
     </table>
     </div>
-    <div id="score">SCORE: </div>
+    <div id="score">分数: </div>
     <div id="userinfodiv" class="container">
       <form id="userinfo">
 	<div class="form-row align-items-center">
 	  <div class="col-auto">
 	    <label class="sr-only" for="username">Name</label>
-	    <input type="text" class="form-control mb-2" id="username" placeholder="Jane Doe">
+	    <input type="text" class="form-control mb-2" id="username" placeholder="名字">
 	  </div>
 	  <div class="col-auto">
-	    <input type="submit" value="submit" class="btn btn-primary mb-2"/>
+	    <input type="submit" value="进入" class="btn btn-primary mb-2"/>
 	    {% module xsrf_form_html() %}
 	  </div>
 	</div>
@@ -136,17 +136,17 @@
 	<div class="form-row align-items-center">
 	  <div class="col-auto">
 	    <label class="sr-only" for="message">Message</label>
-	    <input type="text" class="form-control mb-2" id="message" placeholder="Hullo"/>
+	    <input type="text" class="form-control mb-2" id="message" placeholder="你好"/>
 	  </div>
 	  <div class="col-auto">
-	    <input type="submit" value="say" class="btn btn-info mb-2"/>
+	    <input type="submit" value="说" class="btn btn-info mb-2"/>
 	    {% module xsrf_form_html() %}
 	  </div>
 	  <div class="col-auto">
-	    <input id="fight" type="button" value="fight" class="btn btn-danger mb-2"/>
+	    <input id="fight" type="button" value="开始游戏" class="btn btn-danger mb-2"/>
 	  </div>
 	  <div class="col-auto">
-	    <input id="flip" type="button" value="flip (0)" class="btn btn-light mb-2" style="display:none"/>
+	    <input id="flip" type="button" value="掷骰子 (0)" class="btn btn-light mb-2" style="display:none"/>
 	  </div>
 	</div>
       </form>

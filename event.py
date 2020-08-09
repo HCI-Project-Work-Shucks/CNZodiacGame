@@ -67,7 +67,7 @@ class LoggedIn(Event):
 
     def resp_obj(self, ws):
         obj = super(LoggedIn, self).resp_obj(ws)
-        obj['message'] = '**NOTICE** %s joined' % self.player.name
+        obj['message'] = '**提示** %s 加入了' % self.player.name
         obj['chessers'] = [c.resp_obj() for c in self.chessers]
         return obj
 
@@ -86,7 +86,7 @@ class LoggedOut(Event):
 
     def resp_obj(self, ws):
         obj = super(LoggedOut, self).resp_obj(ws)
-        obj['message'] = '**NOTICE** %s exited' % self.player.name
+        obj['message'] = '**提示** %s 离开了' % self.player.name
 
         if self.new_round_chesser:
             obj['new_round_chesser'] = self.new_round_chesser.resp_obj()
@@ -97,7 +97,7 @@ class LoggedOut(Event):
 class Round(Message):
 
     def __init__(self, player):
-        message = "**NOTICE** %s's round" % player.name
+        message = "**提示** 轮到 %s 了" % player.name
         super(Round, self).__init__(player, message)
         self.type = ROUND
 

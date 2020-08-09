@@ -79,7 +79,7 @@ var cnz = {
         cnz.fadeOutIn(btn)
         btn.removeAttr("disabled")
 
-        $("#round").html("it's your turn").fadeIn()
+        $("#round").html("轮到你了").fadeIn()
     },
 
     win: function(message) {
@@ -183,7 +183,7 @@ var cnz = {
         var interval
         var animate = function(i) {
             if (cnz.ami(message.player_id)) {
-                var v = "flip (" + dice.toString() + ")"
+                var v = "掷骰子 (" + dice.toString() + ")"
                 btn.slideUp().val(v).slideDown()
             }
 
@@ -234,9 +234,9 @@ var cnz = {
 
         var node = $("#topic")
         if (message.correct) {
-            node.text("CORRECT").css({"color": "green"})
+            node.text("答对了").css({"color": "green"})
         } else {
-            node.text("INCORRECT").css({"color": "red"})
+            node.text("答错了").css({"color": "red"})
         }
         cnz.fadeOutIn(node).fadeOut()
 
@@ -251,7 +251,7 @@ var cnz = {
     },
 
     markRound: function(name) {
-        var node = $("#round").html("it's " + name + "'s turn")
+        var node = $("#round").html("轮到 " + name + " 了")
         cnz.fadeOutIn(node)
     },
 
